@@ -3,7 +3,7 @@ import "./Hero.css"
 
 // Assets
 import hero from "../assets/greenwich.jpeg"
-import arrow from "../assets/arrow.svg"
+import arrow from "../assets/Arrow.svg"
 
 export default function Hero () {
   return (
