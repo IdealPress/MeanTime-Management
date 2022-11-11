@@ -1,0 +1,36 @@
+#visualization {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  border: none;
+  background: var(--bg-color);
+  color: var(--color);
+  border-top: 1px solid var(--color);
+}
+
+/* .vis-timeline:nth-of-type(2) {
+  opacity: 0;
+  height: 0;
+  width: 0;
+} */
+
+.vis-timeline {
+  border: none;
+}
+.vis-time-axis .vis-text {
+  color: var(--color);
+}
+.vis-item {
+  background: var(--bg-color);;
+  border: 1px solid var(--color);
+  color: var(--color);;
+  cursor: pointer;
+}
+.vis-item.vis-selected {
+  background-color: var(--color);;
+  border-color: var(--color);
+  color: var(--bg-color);;
+}
+
+.vis-panel.vis-center, .vis-panel.vis-left, .vis-panel.vis-right, .vis-panel.vis-top, .vis-panel.vis-bottom {
+  border-color: var(--color);
+}

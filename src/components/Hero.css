@@ -1,0 +1,68 @@
+section {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+section .hero {
+  width: calc(100% - 40px);
+  margin: 0px 20px;
+  height: calc(100vh - 120px);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 5px 8px rgba(20, 20, 20, 0.2);
+  /* border: 1px solid var(--color); */
+  cursor: pointer;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+section .hero > div {
+  width: 100%;
+  min-height: 200px;
+  background: var(--bg-color-opaque);
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  color: var(--color);
+  backdrop-filter: blur(10px);
+  display: flex;
+}
+
+.left {
+  flex-grow: 2;
+  width: 80%;
+}
+
+.left h2 {
+  font-size: calc(3rem + 5vw);
+  line-height: 95%;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.left span {
+  font-size: 0.8rem;
+  margin-bottom: calc(20px + 2vw);
+  border-bottom: 1px solid var(--color);
+  display: inline-block;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right span {
+  font-size: 0.8rem;
+  margin-bottom: calc(20px + 2vw);
+  /* border-bottom: 1px solid var(--color); */
+  display: inline-block;
+  text-align: right ;
+}

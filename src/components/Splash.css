@@ -1,0 +1,15 @@
+#splash {
+  position: fixed;
+  z-index: 30;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#splash img {
+  width: 25vw;
+}
