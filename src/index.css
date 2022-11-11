@@ -1,8 +1,22 @@
+@import url("https://use.typekit.net/iyv6lut.css");
+
 :root {
   --color: rgb(228, 235, 255);
   --color-opaque: rgb(248, 245, 242, 0.6);
   --bg-color: rgb(48, 55, 120);
   --bg-color-opaque: rgb(49, 60, 4, 0.2);
+}
+
+* {
+  margin: 0;
+  font-family: 'monotype-grotesque', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: var(--color);
+  background: var(--bg-color);
 }
 
 a {
