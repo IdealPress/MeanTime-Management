@@ -34,10 +34,10 @@
 .vis-panel.vis-center, .vis-panel.vis-left, .vis-panel.vis-right, .vis-panel.vis-top, .vis-panel.vis-bottom {
   border-color: var(--color);
 }
-.vis-time-axis, .vis-text {
-  color: var(--color);
+.vis-time-axis .vis-text {
+  color: var(--color) !important;
 }
 
 .vis-item {
-  color: var(--color);
+  color: var(--color) !important;
 }
