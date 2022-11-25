@@ -1,0 +1,28 @@
+.info {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+  background-color: var(--bg-color-opaque);
+  backdrop-filter: blur(10px);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+
+.panel {
+  width: 80vw;
+  height: 80vh;
+  background: var(--color);
+  color: var(--bg-color);
+  border-radius: 10px;
+  overflow-y: scroll;
+  padding: 20px;
+  
+}
+
+.panel p {
+  font-size: 2rem;
+}

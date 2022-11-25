@@ -1,35 +1,41 @@
-section {
+.hero-wrapper {
   width: 100vw;
+  display: flex;
+  max-height: 100vh;
+}
+
+.hero {
+  width: 70%;
   height: auto;
   position: relative;
   transition: transform 0.2s;
+  padding: 40px 20px 0px;
 }
 
-section .hero {
-  width: calc(100% - 40px);
-  margin: 0px 20px;
-  height: calc(100vh - 120px);
+.hero .base {
+  width: 100%;
+  height: calc(100vh - 40px);
+  background-color: var(--color);
   background-position: center;
   background-size: cover;
   border-radius: 20px;
   display: flex;
   align-items: flex-end;
   box-shadow: 0px 5px 8px rgba(20, 20, 20, 0.2);
-  /* border: 1px solid var(--color); */
   cursor: pointer;
 }
 
-section:hover {
+.hero:hover {
   transform: translateY(-5px);
 }
 
-section .hero > div {
+.hero .base > div {
   width: 100%;
   min-height: 200px;
-  background: var(--bg-color-opaque);
+  background: var(--color-opaque);
   border-radius: 0px 0px 20px 20px;
   padding: 20px;
-  color: var(--color);
+  color: var(--bg-color);
   backdrop-filter: blur(10px);
   display: flex;
 }
@@ -40,7 +46,7 @@ section .hero > div {
 }
 
 .left h2 {
-  font-size: calc(3rem + 5vw);
+  font-size: calc(3rem + 2vw);
   line-height: 95%;
   font-weight: normal;
   font-style: italic;
@@ -50,7 +56,7 @@ section .hero > div {
 .left span {
   font-size: 0.8rem;
   margin-bottom: calc(20px + 2vw);
-  border-bottom: 1px solid var(--color);
+  border-bottom: 1px solid var(--bg-color);
   display: inline-block;
 }
 .right {
@@ -62,7 +68,86 @@ section .hero > div {
 .right span {
   font-size: 0.8rem;
   margin-bottom: calc(20px + 2vw);
-  /* border-bottom: 1px solid var(--color); */
   display: inline-block;
   text-align: right ;
+}
+
+.archive {
+  width: 30%;
+  height: auto;
+  position: relative;
+  transition: transform 0.2s;
+  padding: 40px 20px 0px;
+  overflow-y: scroll;
+}
+
+.archive .archive-title {
+  font-size: 1.25rem;
+  background: var(--color-opaque);
+  color: var(--bg-color);
+  text-align: center;
+  margin: 0px 0px 10px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  position: sticky;
+  top: 0px;
+  backdrop-filter: blur(10px);
+  z-index: 20;
+}
+
+.archive div {
+  min-height: 35%;
+  margin: 20px 0px 0px;
+  background-color: var(--color);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.archive div > div {
+  background: var(--color-opaque);
+  border-radius: 0px 0px 20px 20px;
+  backdrop-filter: blur(10px);
+  color: var(--bg-color);
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .hero {
+    width: 50%;
+  }
+
+  .archive {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero-wrapper {
+    display: initial;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .archive {
+    width: 100%;
+  }
+
+  .archive div {
+    min-height: 200px;
+  }
+
+  .archive div > div {
+    min-height: 50%;
+  }
 }

@@ -1,10 +1,10 @@
 @import url("https://use.typekit.net/iyv6lut.css");
 
 :root {
-  --color: rgb(228, 235, 255);
-  --color-opaque: rgb(248, 245, 242, 0.6);
-  --bg-color: rgb(48, 55, 120);
-  --bg-color-opaque: rgb(49, 60, 4, 0.2);
+  --color: rgb(5, 5, 5);
+  --color-opaque: rgb(5, 5, 5, 0.6);
+  --bg-color: rgb(245, 245, 245);
+  --bg-color-opaque: rgb(245, 245, 245, 0.2);
 }
 
 * {
@@ -12,6 +12,7 @@
   font-family: 'monotype-grotesque', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,4 +23,8 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.invert .cls-1 {
+  fill: var(--bg-color) !important;
 }

@@ -1,7 +1,14 @@
 footer {
   margin-top: 60px;
-  background: var(--color);
-  color: var(--bg-color);
   width: 100%;
   min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+footer svg {
+  width: 10%;
+  margin: 0px 20px;
 }

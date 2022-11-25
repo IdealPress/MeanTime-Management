@@ -6,45 +6,60 @@ nav {
   height: 100px;
   font-size: 2rem;
   border-bottom: 2px solid var(--bg-color);
+  width: 100%;
 }
 
-nav > .logo {
+nav.invert {
+  color: var(--bg-color) !important;
+}
+
+nav .logo {
   display: flex;
   align-items: center;
   line-height: 100%;
   font-size: 1.6rem;
 }
-nav > .logo p {
+nav .logo p {
   font-style: italic;
 }
 
-nav img {
+nav svg {
   padding-right: 10px;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
 }
+
 nav li {
   font-size: 1.2rem;
   display: inline-block;
   margin: 0px 20px 0px 0px;
 }
+
 nav li a {
   padding: 6px 7px;
-  border: 1px solid var(--color);
+  border: 1px solid inherit;
   border-radius: 5px;
   display: inline-block;
 }
+
 nav li a:hover {
   transition: all 0.2s;
   opacity: 0.8;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
   transform: translateY(-4px);
 }
+
 .active {
   background: var(--color);
   color: var(--bg-color);
+}
+
+.invert .active {
+  background: var(--bg-color);
+  color: var(--color);
 }
 
 @media only screen and (max-width: 600px) {

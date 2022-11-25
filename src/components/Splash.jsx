@@ -1,12 +1,8 @@
 // Modules
 import { useEffect, useState, useRef } from "react";
 
-// Styles
-import logo from "../assets/Logo.svg"
-import logo2 from "../assets/Logo2.svg"
-import logo3 from "../assets/Logo3.svg"
-import logo4 from "../assets/Logo4.svg"
-import logo5 from "../assets/Logo5.svg"
+// Components
+import { LogoA, LogoB, LogoC, LogoD, LogoE } from "./svg"
 
 
 // Assets
@@ -55,7 +51,13 @@ export function useTimeout(callback, delay) {
 export default function Splash({ hide }) {
   const [timeElapsed, setTimeElapsed] = useState(0);
   
-  const logos = [logo, logo2, logo3, logo4, logo5]
+  const logoComponents = [
+    <LogoA />, 
+    <LogoB />, 
+    <LogoC />, 
+    <LogoD />, 
+    <LogoE />
+  ]
 
   useTimeout(() => {
     hide();
@@ -64,7 +66,7 @@ export default function Splash({ hide }) {
   useInterval(
     () => {
       setTimeElapsed((timeElapsed) => 
-        timeElapsed >= logos.length - 1 ? 0 : timeElapsed + 1
+        timeElapsed >= logoComponents.length - 1 ? 0 : timeElapsed + 1
       );
     },
     500
@@ -72,7 +74,7 @@ export default function Splash({ hide }) {
 
   return (
     <div id="splash" onClick={hide} >
-      <img src={logos[timeElapsed]} />
+      { logoComponents[timeElapsed] }
     </div>
   )
 }

@@ -3,32 +3,36 @@ import { Link } from "react-router-dom";
 
 // Styles
 import "./Navigation.css"
+import { LogoB } from "./svg";
 
 // Assets
-import logo from "../assets/Logo2.svg"
 
-export default function Navigation () {
+import Logo from "./svg/LogoA";
+
+export default function Navigation ({ invert }) {
   return (
-    <nav>
-      <div className="logo">
-        <img src={logo} style={{width: "50px"}} />
-        <div>
-          <p>MeanTime</p>
-          <p>Management</p>
+    <nav className={invert ? "invert" : "" }>
+      <Link to="/">
+        <div className="logo">
+          <LogoB style={{ width: "50px" }} />
+          <div>
+            <p>MeanTime</p>
+            <p>Management</p>
+          </div>
         </div>
-      </div>
+      </Link>
       <div>
         <ul>
           <li>
-            <Link to="/">
-              Home
+            <Link to="/about">
+              About
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/timeline" className="active">
               TimeLine 0.1
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

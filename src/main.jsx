@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom";
-import TimelineApp from './TimelineApp'
+
+import { PrismicProvider } from '@prismicio/react'
+import { client } from './prismic'
+
+// import TimelineApp from './TimelineApp'
 import App from "./App"
+import About from './About';
+
 import './index.css'
 
 const router = createBrowserRouter([
@@ -15,13 +20,19 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/timeline",
-    element: <TimelineApp />,
+    path: "/about",
+    element: <About />
   }
+  // {
+  //   path: "/timeline",
+  //   element: <TimelineApp />,
+  // }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <RouterProvider router={router} />
+    <PrismicProvider client={client}>
+      <RouterProvider router={router} />
+    </PrismicProvider>
   // </React.StrictMode>
 )

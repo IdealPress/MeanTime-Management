@@ -1,11 +1,13 @@
 import { useState } from "react";
 
+
 import Splash from "./components/Splash";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 
 import './App.css'
+import Organogram from "./components/Organogram";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true); 
@@ -16,8 +18,12 @@ function App() {
           hide={() => {setShowSplash(false)}} 
         />
       }
-      <Navigation />
+      <Navigation invert />
+      <div className="headline">
+        <p>Does your <i>time</i> work for you?</p>
+      </div>
       <Hero />
+      <Organogram />
       <Footer />
     </>
   )

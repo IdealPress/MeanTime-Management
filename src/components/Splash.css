@@ -4,12 +4,13 @@
   width: 100vw;
   height: 100vh;
   background: var(--bg-color);
+  color: var(--color);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
-#splash img {
+#splash svg {
   width: 25vw;
 }
