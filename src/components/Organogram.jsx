@@ -5,7 +5,7 @@ import "./Organogram.css"
 const Organogram = () => (
   <section className="organogram">
     <p>
-      Meatime Management Organisation Structure
+      Meantime Management Organisation Structure
     </p>
     <div className="scroll-wrapper">
       <Tree
