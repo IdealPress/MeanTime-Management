@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 import './App.css'
 import Organogram from "./components/Organogram";
+import Walk from "./components/Walk";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true); 
@@ -23,6 +24,7 @@ function App() {
         <p>Does your <i>time</i> work for you?</p>
       </div>
       <Hero />
+      <Walk />
       <Organogram />
       <Footer />
     </>

@@ -1,0 +1,90 @@
+#walk {
+  margin: 40px 0 0 0;
+}
+
+.text {
+  background: #68a177;
+  color: white;
+  padding: 40px 40px 40px;
+  display: flex;
+}
+
+.left {
+  width: 80%;
+}
+
+.left p {
+  max-width: 80ch;
+  margin: 6px 0;
+}
+
+.right {
+  display: block;
+  width: 20%;
+}
+
+.text h3 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 200%;
+}
+
+.text ol {
+  padding: 0;
+  margin: 20px 0px;
+}
+
+.testimonials {
+  display: flex;
+}
+
+.testimonials div {
+  padding: 20px;
+  width: 33.33%;
+  font-size: 85%;
+}
+
+.testimonials div p {
+  color: #68a177;
+  margin: 10px 0px;
+}
+
+.testimonial-header {
+  color: #68a177;
+  margin: 20px 20px 0px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 800px) {
+  .text {
+    display: block;
+  }
+
+  .left {
+    width: 100%;
+  }
+  
+  .left p {
+    max-width: 100ch;
+    margin: 6px 0;
+  }
+  
+  .right {
+    display: block;
+    width: 100%;
+  }
+
+  .text b {
+    display: none;
+  }
+
+  .testimonials {
+    display: block;
+  }
+
+  .testimonials div {
+    padding: 20px;
+    width: 100%;
+    font-size: 100%;
+  }
+}
